@@ -1,0 +1,332 @@
+{% extends '../layoutes/index.html' %}
+{% load static %}
+
+
+
+
+{% block card %}
+
+
+<div class="body__overlay"></div>
+<!-- Start Offset Wrapper -->
+<div class="offset__wrapper">
+    <!-- Start Search Popap -->
+    <div class="search__area">
+        <div class="container" >
+            <div class="row" >
+                <div class="col-md-12" >
+                    <div class="search__inner">
+                        <form action="#" method="get">
+                            <input placeholder="Search here... " type="text">
+                            <button type="submit"></button>
+                        </form>
+                        <div class="search__close__btn">
+                            <span class="search__close__btn_icon"><i class="zmdi zmdi-close"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Search Popap -->
+    <!-- Start Cart Panel -->
+    <div class="shopping__cart">
+        <div class="shopping__cart__inner">
+            <div class="offsetmenu__close__btn">
+                <a href="#"><i class="zmdi zmdi-close"></i></a>
+            </div>
+            <div class="shp__cart__wrap">
+                <div class="shp__single__product">
+                    <div class="shp__pro__thumb">
+                        <a href="#">
+                            <img src="images/product-2/sm-smg/1.jpg" alt="product images">
+                        </a>
+                    </div>
+                    <div class="shp__pro__details">
+                        <h2><a href="product-details.html">BO&Play Wireless Speaker</a></h2>
+                        <span class="quantity">QTY: 1</span>
+                        <span class="shp__price">$105.00</span>
+                    </div>
+                    <div class="remove__btn">
+                        <a href="#" title="Remove this item"><i class="zmdi zmdi-close"></i></a>
+                    </div>
+                </div>
+                <div class="shp__single__product">
+                    <div class="shp__pro__thumb">
+                        <a href="#">
+                            <img src="images/product-2/sm-smg/2.jpg" alt="product images">
+                        </a>
+                    </div>
+                    <div class="shp__pro__details">
+                        <h2><a href="product-details.html">Brone Candle</a></h2>
+                        <span class="quantity">QTY: 1</span>
+                        <span class="shp__price">$25.00</span>
+                    </div>
+                    <div class="remove__btn">
+                        <a href="#" title="Remove this item"><i class="zmdi zmdi-close"></i></a>
+                    </div>
+                </div>
+            </div>
+            <ul class="shoping__total">
+                <li class="subtotal">Subtotal:</li>
+                <li class="total__price">$130.00</li>
+            </ul>
+            <ul class="shopping__btn">
+                <li><a href="card/">View Cart</a></li>
+                <li class="shp__checkout"><a href="checkout.html">Checkout</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Cart Panel -->
+</div>
+<!-- End Offset Wrapper -->
+<!-- Start Bradcaump area -->
+<div class="ht__bradcaump__area" style="background: rgba(0, 0, 0, 0) url(images/bg/4.jpg) no-repeat scroll center center / cover ;">
+    <div class="ht__bradcaump__wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="bradcaump__inner">
+                        <nav class="bradcaump-inner">
+                          <a class="breadcrumb-item" href="index.html">Home</a>
+                          <span class="brd-separetor"><i class="zmdi zmdi-chevron-right"></i></span>
+                          <span class="breadcrumb-item active">shopping cart</span>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Bradcaump area -->
+<!-- cart-main-area start -->
+<div class="cart-main-area ptb--100 bg__white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <form action="#">               
+                    <div class="table-content table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="product-thumbnail">products</th>
+                                    <th class="product-name">name of products</th>
+                                    <th class="product-price">Price</th>
+                                    <th class="product-quantity">Quantity</th>
+                                    <th class="product-subtotal">Total</th>
+                                    <th class="product-remove">Remove</th>
+                                </tr>
+                            </thead>
+                            <tbody id="t_card">
+                                <!-- <tr>
+                                    <td class="product-thumbnail"><a href="#"><img src="{% static item.image %}" alt="product img" /></a></td>
+                                    <td class="product-name"><a href="#">{{ item.name }}</a>
+                                        <ul  class="pro__prize">
+                                            <li class="old__prize">$82.5</li>
+                                            <li>$75.2</li>
+                                        </ul>
+                                    </td>
+                                    <td class="product-price"><span class="amount">£165.00</span></td>
+                                    <td class="product-quantity"><input type="number" value="1" /></td>
+                                    <td class="product-subtotal">£165.00</td>
+                                    <td class="product-remove"><a href="#"><i class="icon-trash icons"></i></a></td>
+                                </tr>
+                               -->
+                                
+                               
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="buttons-cart--inner">
+                                <div class="buttons-cart">
+                                    <a href="#">Continue Shopping</a>
+                                </div>
+                                <div class="buttons-cart checkout--btn">
+                                    <a href="#">update</a>
+                                    <a href="#">checkout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="ht__coupon__code">
+                                <span>Enter your discount code</span>
+                                <div class="coupon__box">
+                                    <input type="text" placeholder="">
+                                    <div class="ht__cp__btn">
+                                        <a href="#">Enter</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-xs-12 smt-40 xmt-40">
+                            <div class="htc__cart__total">
+                                <h6>Cart Total</h6>
+                                <div class="cart__desk__list">
+                                    <ul class="cart__desc">
+                                        <li>Cart Total</li>
+                                        <li>Tax</li>
+                                        <li>Shipping</li>
+                                    </ul>
+                                    <ul class="cart__price">
+                                        <li id="cart-total">$0.00</li>      <!-- Savat umumiy qiymati -->
+                                        <li id="tax-amount">$0.00</li>      <!-- Soliq qiymati -->
+                                        <li id="shipping-cost">$0.00</li>   <!-- Yetkazib berish qiymati -->
+                                    </ul>
+                                </div>
+                                <div class="cart__total">
+                                    <span>Order Total</span>
+                                    <span id="order-total">$0.00</span>   <!-- Yakuniy buyurtma qiymati -->
+                                </div>
+                                <ul class="payment__btn">
+                                    <li class="active"><a href="#">Payment</a></li>
+                                    <li><a href="#">Continue Shopping</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </form> 
+            </div>
+        </div>
+    </div>
+</div>
+<!-- cart-main-area end -->
+<!-- Start Brand Area -->
+<div class="htc__brand__area bg__cat--4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="ht__brand__inner">
+                    <ul class="brand__list owl-carousel clearfix">
+                        <li><a href="#"><img src="images/brand/1.png" alt="brand images"></a></li>
+                        <li><a href="#"><img src="images/brand/2.png" alt="brand images"></a></li>
+                        <li><a href="#"><img src="images/brand/3.png" alt="brand images"></a></li>
+                        <li><a href="#"><img src="images/brand/4.png" alt="brand images"></a></li>
+                        <li><a href="#"><img src="images/brand/5.png" alt="brand images"></a></li>
+                        <li><a href="#"><img src="images/brand/5.png" alt="brand images"></a></li>
+                        <li><a href="#"><img src="images/brand/1.png" alt="brand images"></a></li>
+                        <li><a href="#"><img src="images/brand/2.png" alt="brand images"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Brand Area -->
+<!-- Start Banner Area -->
+<div class="htc__banner__area">
+    <ul class="banner__list owl-carousel owl-theme clearfix">
+        <li><a href="product-details.html"><img src="images/banner/bn-3/1.jpg" alt="banner images"></a></li>
+        <li><a href="product-details.html"><img src="images/banner/bn-3/2.jpg" alt="banner images"></a></li>
+        <li><a href="product-details.html"><img src="images/banner/bn-3/3.jpg" alt="banner images"></a></li>
+        <li><a href="product-details.html"><img src="images/banner/bn-3/4.jpg" alt="banner images"></a></li>
+        <li><a href="product-details.html"><img src="images/banner/bn-3/5.jpg" alt="banner images"></a></li>
+        <li><a href="product-details.html"><img src="images/banner/bn-3/6.jpg" alt="banner images"></a></li>
+        <li><a href="product-details.html"><img src="images/banner/bn-3/1.jpg" alt="banner images"></a></li>
+        <li><a href="product-details.html"><img src="images/banner/bn-3/2.jpg" alt="banner images"></a></li>
+    </ul>
+</div>
+<!-- End Banner Area -->
+<!-- End Banner Area -->
+
+<script>
+
+let store = localStorage.getItem('cards');
+
+if (store) {
+    let data = JSON.parse(store);
+    
+    data.map((d) => {
+        let tr = document.createElement('tr');
+        let name = document.createElement('td');
+        let image = document.createElement('td');
+        let price = document.createElement('td');
+        let discount = document.createElement('td');
+        let quantity = document.createElement('td');
+        let total = document.createElement('td'); // Jami qiymat uchun
+        let addcard = document.createElement('td');
+        let del = document.createElement('td');
+
+        // O'chirish tugmasi
+        del.innerHTML = `<a href="#"><i class="icon-trash icons"></i></a>`;
+        del.addEventListener('click', () => Del(d.id, tr));
+        del.className = 'product-remove';
+
+        // Mahsulot ma'lumotlari
+        image.innerHTML = `<a href="#"><img src="${d.image}" alt="" /></a>`;
+        image.className = 'product-thumbnail';
+        name.innerHTML = `<a href="#">${d.name}</a>`;
+        name.className = 'product-name';
+        price.innerHTML = `<span class="amount">£ ${d.price}</span>`;
+        price.className = 'old__prize';
+        discount.innerHTML = `<span class="amount">£ ${d.discount}</span>`;
+        discount.className = 'old__prize';
+
+        // Mahsulot miqdorini belgilash uchun input
+        quantity.innerHTML = `<input type="number" value="1" min="1" />`;
+        quantity.className = 'product-quantity';
+        
+        // Jami narx uchun
+        total.className = 'product-total';
+        total.innerHTML = `£ ${d.price}`; // Boshlang'ich qiymat sifatida narx ko'rsatiladi
+
+        // Miqdor o'zgarganda jami narxni yangilash funksiyasi
+        quantity.querySelector('input').addEventListener('input', (e) => {
+            let qty = parseInt(e.target.value);
+            let itemTotal = d.price * qty;
+            Total_count(itemTotal)
+            
+            total.innerHTML = `£ ${itemTotal.toFixed(2)}`;
+            updateLocalStorage(d.id, qty); // LocalStorage-da miqdorni yangilash
+        });
+
+        // Savatchaga qo‘shish tugmasi
+        addcard.innerHTML = `<a href="#"> Add to Cart</a>`;
+        addcard.className = 'product-add-to-cart';
+
+        // Elementlarni biriktirish
+        tr.appendChild(image);
+        tr.appendChild(name);
+        tr.appendChild(price);
+        tr.appendChild(quantity);
+        tr.appendChild(total);
+        tr.appendChild(del);
+
+        document.getElementById('t_card').appendChild(tr);
+    });
+
+    function Del(itemId, tr) {
+        let updatedData = data.filter(item => item.id !== itemId);
+        localStorage.setItem('cards', JSON.stringify(updatedData));
+        tr.remove();
+    }
+
+    // LocalStorage-da miqdorni yangilash funksiyasi
+    function updateLocalStorage(itemId, qty) {
+        let updatedData = data.map(item => {
+            if (item.id === itemId) {
+                item.quantity = qty;
+            }
+            return item;
+        });
+        localStorage.setItem('cards', JSON.stringify(updatedData));
+    }
+}
+
+
+function Total_count(data) {
+   let sum =0
+   sum+=data
+   console.log(sum);
+   
+    
+}
+
+    </script>
+
+
+{% endblock %}

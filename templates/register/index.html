@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <h1 style="color: blue;"   align="center">Register</h1>
+
+    <h1>{{error}}</h1>
+
+
+<form action="" align="center" method="post">
+    {% csrf_token %}
+<input type="text" name="username" placeholder="   username" style="border-radius: 10px;"> <br> <br>
+<input type="text" name="first_name" placeholder="   First Name" style="border-radius: 10px;"><br> <br>
+<input type="text" name="last_name" placeholder="   Last Name" style="border-radius: 10px;"><br> <br>
+<input type="email" name="email" placeholder="   email" style="border-radius: 10px;"><br> <br>
+
+<input type="password" name="password" placeholder="   password" style="border-radius: 10px;"><br> <br>
+<input type="password" name="confirm_password" placeholder="   Confirm password" style="border-radius: 10px;"><br> <br>
+
+<input type="submit" value=" Register" style="border-radius: 10px;color: white;background-color: blue;"><br> <br>
+
+
+
+
+
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
